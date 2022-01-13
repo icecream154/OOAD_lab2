@@ -8,6 +8,9 @@ import domain.value.matchResult.base.MatchEntry;
 
 import java.util.*;
 
+/**
+ * 学分要求抽象基类
+ */
 public abstract class CreditRequirement extends AbstractRequirement implements Requirement {
     private final List<String> courseIds;
     private final int totalCredit;

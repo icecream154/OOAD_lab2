@@ -7,6 +7,7 @@ import domain.factory.LearningRecordFactory;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class LearningRecordLoader {
@@ -23,8 +24,10 @@ public class LearningRecordLoader {
                 );
                 if (learningRecord == null) return false;
             }
-        } catch (FileNotFoundException fileNotFoundException) {
-            fileNotFoundException.printStackTrace();
+            scanner.close();
+            fileInputStream.close();
+        } catch (IOException exception) {
+            exception.printStackTrace();
             return false;
         }
 

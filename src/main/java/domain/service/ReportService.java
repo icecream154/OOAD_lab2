@@ -11,7 +11,18 @@ import java.util.Map;
 
 public class ReportService {
 
-    public static Report giveReport(Student student, String direction) {
+    private static Map<String, Report> cachedReports = new HashMap<>();
+
+    public static Report giveReport(Student student, String direction, boolean allowCache) {
+        String reportKey = student.getId() + "-" + direction;
+        // 读取预先计算的缓存
+        if (allowCache) {
+            Report cached = cachedReports.get(reportKey);
+            if (cached != null) {
+                return cached;
+            }
+        }
+
         MajorPreference majorPreference = student.getMajor().getMajorPreference(direction);
         if (majorPreference == null) return null;
 
@@ -24,6 +35,8 @@ public class ReportService {
             ));
         }
 
-        return new Report(student, direction, requirementMatchResultMap);
+        Report report = new Report(student, direction, requirementMatchResultMap);
+        cachedReports.put(reportKey, report);
+        return report;
     }
 }

@@ -10,6 +10,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * 门数要求抽象基类
+ */
 public abstract class CountRequirement extends AbstractRequirement implements Requirement {
     private final List<String> courseIds;
     private final int totalCount;

@@ -8,6 +8,9 @@ import domain.value.matchResult.base.MatchEntry;
 
 import java.util.*;
 
+/**
+ * 必修要求抽象基类
+ */
 public abstract class CompulsoryRequirement extends AbstractRequirement implements Requirement {
     private final List<String> courseIds;
 

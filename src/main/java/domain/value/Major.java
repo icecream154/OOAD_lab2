@@ -29,8 +29,8 @@ public class Major {
         this.preferenceMap.put(preference.getPreferenceName(), preference);
     }
 
-    public MajorPreference getPreference(String preferenceName) {
-        return preferenceMap.get(preferenceName);
+    public Map<String, MajorPreference> getPreferenceMap() {
+        return preferenceMap;
     }
 
     @Override

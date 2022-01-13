@@ -5,6 +5,7 @@ import domain.factory.CourseFactory;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class CourseLoader {
@@ -25,8 +26,10 @@ public class CourseLoader {
                     // System.out.println("exchange config: [" + info[3] + "] exchange [" + info[0] + "]");
                 }
             }
-        } catch (FileNotFoundException fileNotFoundException) {
-            fileNotFoundException.printStackTrace();
+            scanner.close();
+            fileInputStream.close();
+        } catch (IOException exception) {
+            exception.printStackTrace();
             return false;
         }
 

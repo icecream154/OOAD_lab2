@@ -39,7 +39,7 @@ public class Main {
         }
         System.out.println();
 
-        Executor executor = new Executor();
+        Executor executor = new Executor("outputs");
         executor.showCommands();
         while(true) {
             System.out.print("-- Give Command : ");

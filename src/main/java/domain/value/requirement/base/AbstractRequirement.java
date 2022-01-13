@@ -8,6 +8,10 @@ import domain.value.matchResult.base.MatchEntry;
 
 import java.util.*;
 
+/**
+ * 培养要求抽象基类
+ * 实现公共方法：通过修读记录以及学分转换规则获取要求中匹配的课程列表
+ */
 public abstract class AbstractRequirement {
 
     protected List<MatchEntry> getMatchedEntries(final Map<String, Course> courseMap,

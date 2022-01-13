@@ -9,6 +9,7 @@ import domain.value.Major;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class StudentLoader {
@@ -26,8 +27,10 @@ public class StudentLoader {
                 Student student = StudentFactory.registerStudent(info[0], info[1], major);
                 if (student == null) return false;
             }
-        } catch (FileNotFoundException fileNotFoundException) {
-            fileNotFoundException.printStackTrace();
+            scanner.close();
+            fileInputStream.close();
+        } catch (IOException exception) {
+            exception.printStackTrace();
             return false;
         }
 

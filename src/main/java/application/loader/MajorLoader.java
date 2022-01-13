@@ -8,6 +8,7 @@ import domain.value.requirement.impl.*;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.*;
 
 public class MajorLoader {
@@ -64,7 +65,9 @@ public class MajorLoader {
                     generalRequirements.add(buildOtherElectiveRequirement(lastRequirementDef));
                 }
             }
-        } catch (FileNotFoundException fileNotFoundException) {
+            scanner.close();
+            fileInputStream.close();
+        } catch (IOException fileNotFoundException) {
             fileNotFoundException.printStackTrace();
             return false;
         }
