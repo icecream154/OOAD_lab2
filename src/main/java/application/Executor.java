@@ -95,7 +95,7 @@ public class Executor {
     }
 
     private boolean changeMajor(String rawCommand) {
-        String[] splits = rawCommand.split(" ");
+        String[] splits = rawCommand.split(" ", 4);
         if (splits.length != 4) {
             System.out.println("Command format error: CHANGE MAJOR <studentId> <major>");
             return false;
