@@ -144,7 +144,11 @@ public class Executor {
 
         String prettyJson = report.getPrettyJsonReport();
         try {
-            String reportFileName = "progress_report_" + student.getId() + "_" + student.getMajor().getName() + ".json";
+            String reportFileName = "progress_report_" + student.getId() + "_" + student.getMajor().getName();
+            if (!direction.equals("")) {
+                reportFileName += "_" + direction;
+            }
+            reportFileName += ".json";
             File file = new File(reportOutputPath + "/" + reportFileName);
             if (!file.exists()) {
                 file.createNewFile();

@@ -83,7 +83,14 @@ public class OtherElectiveRequirement implements Requirement {
         List<MatchEntry> matchEntries = new ArrayList<>();
         for (Course course :unmatchedCourse) {
             matchCredit += course.getCredit();
-            matchEntries.add(new MatchEntry(course, false, null));
+            String exchangeCourseId = courseExchangeMap.get(course.getId());
+            if (exchangeCourseId != null) {
+                Course exchangeCourse = CourseFactory.getCourseById(exchangeCourseId);
+                matchEntries.add(new MatchEntry(exchangeCourse, true, course));
+            } else {
+                matchCredit += course.getCredit();
+                matchEntries.add(new MatchEntry(course, false, null));
+            }
         }
 
         // 生成匹配结果

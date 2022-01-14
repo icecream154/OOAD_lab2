@@ -8,7 +8,7 @@ Lab使用了DDD的设计，实现了bonus部分的所有需求。
 2 outputs:
 包含了一份样例输出文件progress_report_bonus_example.json（此文件由助教提供）。
 程序生成的json报告会打印到控制台，同时生成至outputs中，
-命名如下——progress_report_{studentId}_{majorName}.json。
+命名如下——progress_report_{studentId}_{majorName}[_{direction}].json。
 3 src:项目代码
 包含三个部分
 ① domain包
