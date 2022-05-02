@@ -23,7 +23,6 @@ Lab使用了DDD的设计，实现了bonus部分的所有需求。
                如CompulsoryRequirement(必修要求抽象基类)、CreditRequirement(学分要求抽象基类)等。
                impl中具体实现类会继承抽象基类。
             b. 一个培养要求会有对应的培养要求匹配结果，MatchResult的层次结构与培养计划要求类似。
-    utils包:负责封装一些与领域无关的工具方法
 
 ② application包
 应用层。

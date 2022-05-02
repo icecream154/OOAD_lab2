@@ -1,7 +1,7 @@
 package domain.factory;
 
 import domain.entity.Student;
-import domain.value.Major;
+import domain.entity.Major;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,0 +1,38 @@
+projectName: "CourseTakeReportTool"
+projectLanguage: "Java"
+projectFrame: ""
+projectStructure:
+  - moduleName: "domain.entity"
+    moduleDescription: "实体类模块，包括学生、课程、修读记录、培养计划、培养计划匹配结果等"
+    modulePath: "/src/main/java/domain/entity"
+    dependentModules: # 模块依赖的外部模块
+      - "domain.factory"
+  - moduleName: "domain.factory"
+    moduleDescription: "工厂类模块，管理领域对象模型的生命周期，包括创建、销毁、更新等"
+    modulePath: "/src/main/java/domain/factory"
+    dependentModules: # 模块依赖的外部模块
+      - "domain.entity"
+  - moduleName: "domain.service"
+    moduleDescription: "领域服务模块，实现培养计划报告生成"
+    modulePath: "/src/main/java/domain/service"
+    dependentModules:
+      - "domain.entity"
+  - moduleName: "application.loader"
+    moduleDescription: "模型加载模块，接受外部输入，并转换为领域模型"
+    modulePath: "/src/main/java/application/loader"
+    dependentModules:
+      - "domain.entity"
+      - "domain.factory"
+  - moduleName: "application.executor"
+    moduleDescription: "执行器模块，执行相关命令对领域模型进行操作"
+    modulePath: "/src/main/java/application"
+    dependentModules:
+      - "domain.entity"
+      - "domain.service"
+      - "domain.factory"
+  - moduleName: "main"
+    moduleDescription: "程序入口模块，提供cli交互式客户端"
+    modulePath: "/src/main/java"
+    dependentModules:
+      - "application.loader"
+      - "application.executor"

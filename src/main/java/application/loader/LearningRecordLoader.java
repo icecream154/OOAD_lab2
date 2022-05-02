@@ -1,12 +1,9 @@
 package application.loader;
 
-import domain.entity.Course;
 import domain.entity.LearningRecord;
-import domain.factory.CourseFactory;
 import domain.factory.LearningRecordFactory;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Scanner;
 

@@ -1,20 +1,21 @@
-package application;
-
+import domain.entity.Major;
+import domain.entity.MajorPreference;
 import domain.entity.Student;
+import domain.entity.match.report.Report;
 import domain.factory.LearningRecordFactory;
 import domain.factory.MajorFactory;
 import domain.factory.StudentFactory;
 import domain.service.ReportService;
-import domain.entity.Major;
-import domain.entity.MajorPreference;
-import domain.entity.match.report.Report;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.PrintWriter;
 
-public class Executor {
+public class FakeExecutor {
     private String reportOutputPath;
 
-    public Executor(String reportOutputPath) {
+    public FakeExecutor(String reportOutputPath) {
         this.reportOutputPath = reportOutputPath;
     }
 

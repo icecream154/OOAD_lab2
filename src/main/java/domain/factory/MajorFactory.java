@@ -1,6 +1,6 @@
 package domain.factory;
 
-import domain.value.Major;
+import domain.entity.Major;
 
 import java.util.HashMap;
 import java.util.Map;

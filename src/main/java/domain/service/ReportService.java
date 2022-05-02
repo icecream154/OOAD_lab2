@@ -1,10 +1,10 @@
 package domain.service;
 
 import domain.entity.Student;
-import domain.value.MajorPreference;
-import domain.value.report.Report;
-import domain.value.requirement.base.Requirement;
-import domain.value.matchResult.base.MatchResult;
+import domain.entity.MajorPreference;
+import domain.entity.match.report.Report;
+import domain.entity.requirement.base.Requirement;
+import domain.entity.match.matchResult.base.MatchResult;
 
 import java.util.HashMap;
 import java.util.Map;

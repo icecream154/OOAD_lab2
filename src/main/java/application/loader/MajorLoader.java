@@ -1,13 +1,12 @@
 package application.loader;
 
 import domain.factory.MajorFactory;
-import domain.value.Major;
-import domain.value.MajorPreference;
-import domain.value.requirement.base.Requirement;
-import domain.value.requirement.impl.*;
+import domain.entity.Major;
+import domain.entity.MajorPreference;
+import domain.entity.requirement.base.Requirement;
+import domain.entity.requirement.impl.*;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.*;
 

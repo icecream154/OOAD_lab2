@@ -1,7 +1,5 @@
 package domain.entity;
 
-import domain.value.Major;
-
 import java.util.ArrayList;
 import java.util.List;
 

@@ -1,14 +1,11 @@
 package application.loader;
 
-import domain.entity.Course;
 import domain.entity.Student;
-import domain.factory.CourseFactory;
 import domain.factory.MajorFactory;
 import domain.factory.StudentFactory;
-import domain.value.Major;
+import domain.entity.Major;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Scanner;
 

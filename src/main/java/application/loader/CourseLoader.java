@@ -4,7 +4,6 @@ import domain.entity.Course;
 import domain.factory.CourseFactory;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Scanner;
 
